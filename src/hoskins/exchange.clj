@@ -11,7 +11,7 @@
   [ex name c]
   (assoc-in ex [name :chan] c))
 
-(defn subscribe
+(defn subscribe-ex
   [ex name topic]
   (let [c-info (get ex name)
         loc (if-let [loc (:loc c-info)]

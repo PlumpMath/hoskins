@@ -17,8 +17,8 @@
 (facts "about subscringing to a channel"
        (let [c (chan)
              ex (set-ex empty-exchange :channel c)
-             [ex sub-c1] (subscribe ex :channel :topic1)
-             [ex sub-c2] (subscribe ex  :channel :topic2)]
+             [ex sub-c1] (subscribe-ex ex :channel :topic1)
+             [ex sub-c2] (subscribe-ex ex  :channel :topic2)]
          (fact "all channels are unique"
                sub-c1 =not=> c
                sub-c2 =not=> c
